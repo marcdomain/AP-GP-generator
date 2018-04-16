@@ -6,6 +6,10 @@ inputVals = (startVal, endVal) => {
         console.log('Only numbers are allowed!');
         return false;
     }
+    if (!Number.isInteger(startVal) || !Number.isInteger(endVal)) {
+        console.log("Your input should not contain decimal. Only integer values are allowed!");
+        return false;
+    }
     for (let i = 0; i < endVal; i++){
     	let AP_formula = startVal + d*i;
         let GP_formula = startVal*d**i;
@@ -19,4 +23,4 @@ inputVals = (startVal, endVal) => {
     }
     console.log(AP, GP);
 }
-inputVals('3', 15);
+inputVals(3, 15);
